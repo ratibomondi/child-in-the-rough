@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Child in the Rough</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="The Child in the Rough Logo" />
+      <span>The Child in the Rough</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="children.html">Children</a></li>
+      <li><a href="#mission">About</a></li>
+      <li><a href="#donate">Donate</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero / Carousel -->
+  <header>
+    <div class="carousel">
+      <div class="slides">
+        <img src="images/child1.jpg" class="slide active" alt="Children playing">
+        <img src="images/child2.jpg" class="slide" alt="Child smiling">
+        <img src="images/child3.jpg" class="slide" alt="Children in school">
+      </div>
+      <div class="carousel-text">
+        <h2>Every Child Deserves a Future</h2>
+        <p>Join us in transforming lives, one child at a time.</p>
+        <a href="children.html" class="cta">Meet the Children</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Us / Mission -->
+  <section class="about-us" id="mission">
+    <h2>About Us</h2>
+
+    <p>
+      In the heart of the Kibera Slum, where the smell of sewage lingers and survival is a daily battle, children rise each morning into a world of hunger, danger, and fear. For them, play is a luxury. Safety is a myth. And hope? Almost forgotten.
+    </p>
+
+    <p>
+      <strong>The Child in the Rough</strong> was born from this pain — the pain of seeing children rummaging through trash heaps for food, suffering untreated illness, and facing violence that robs them of their innocence. We refused to look away. We chose to act.
+    </p>
+
+    <p>
+      Through humanitarian aid, daily meals, free education, and emergency medical support, we've built a sanctuary in the chaos — a school where children can learn, laugh, and simply be children again. Every pencil, every smile, every meal is a shield against the brutal reality of life in Kibera.
+    </p>
+
+    <p>
+      But this is not just our story. It’s theirs. We share it through raw photography, honest film, and storytelling that doesn't ask for pity, but demands change. These stories are powerful, because they are real — and the world needs to hear them.
+    </p>
+
+    <p>
+      We believe education is the only way out. That one book can change a future. That one meal can give a child the strength to keep going. That one person — you — can help rewrite a life story.
+    </p>
+
+    <p>
+      Join us. Walk with us. Help turn a childhood of pain into a future of promise.
+    </p>
+  </section>
+
+  <!-- Donation Form -->
+  <section id="donate">
+    <h2>Support Our Mission</h2>
+    <form id="donation-form">
+      <input type="text" placeholder="Your Name" required><br>
+      <input type="email" placeholder="Email Address" required><br>
+      <input type="number" placeholder="Amount (KES)" required><br>
+      <button type="submit">Donate Now</button>
+    </form>
+    <p class="fake-note">* This is a demo. Real donation system coming soon.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 The Child in the Rough. All rights reserved.</p>
+  </footer>
+
+  <!-- Carousel Script -->
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    setInterval(() => {
+      slides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add('active');
+    }, 4000);
+  </script>
+
+</body>
+</html>
